@@ -117,12 +117,12 @@ navigator.mediaDevices.getUserMedia({ audio: true }).then(stream => {
         }
         T = peak[0];
 
-        console(T);
+        console.log(T);
 
         // Parabolic Interpolationで補間
         T = T + (NSDF[T-1] - NSDF[T+1]) / (2 * (NSDF[T-1] + NSDF[T+1] - 2 * NSDF[T]));
 
-        console(T);
+        console.log(T);
 
         // サンプリング周波数を周期で割って周波数すなわちピッチを算出
         // 倍音の検出を防ぐため、表示するピッチは検出したピッチのうち最小のものを採用(※1)
