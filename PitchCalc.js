@@ -54,7 +54,7 @@ navigator.mediaDevices.getUserMedia({ audio: true }).then(stream => {
 
         // 弱い周波数成分を除去することでノイズ抑制
         for(var i = 0; i < powerSpectle.length; i++){
-            if(powerSpectle[i] <= 4.5) powerSpectle[i] = 0;
+            if(powerSpectle[i] <= 4) powerSpectle[i] = 0;
         }
 
         // フーリエ逆変換の処理のため実数、虚数の順で並んだ配列を作る
