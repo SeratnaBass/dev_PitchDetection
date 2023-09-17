@@ -111,7 +111,7 @@ navigator.mediaDevices.getUserMedia({ audio: true }).then(stream => {
         let T = 0;
         let peak = [];
         for(var i = negativeCross; i < dd.length; i++){
-            if(dd[i] <= 0 && NSDF[i] >= NSDFmax * 0.8){
+            if(dd[i] <= 0 && NSDF[i] >= NSDFmax * 0.95){
                 peak.push(i);
             }
         }
