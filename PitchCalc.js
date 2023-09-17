@@ -23,7 +23,7 @@ navigator.mediaDevices.getUserMedia({ audio: true }).then(stream => {
     analyserNode.fftSize = 16384;
     gainNode.gain.value = 0.6;
     biquadFilterNode.type = 'lowpass';
-    biquadFilterNode.frequency.value = 1500; // ギターなどのチューニングに用いる場合のフィルタ
+    biquadFilterNode.frequency.value = 440; // ギターなどのチューニングに用いる場合のフィルタ
 
     let freq = 1024;
 
